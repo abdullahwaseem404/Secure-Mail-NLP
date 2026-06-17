@@ -1,67 +1,54 @@
-# ✉️ Secure-Mail-NLP
-# Email Spam Detector
+# 📧 Secure-Mail-NLP
 
-Working Demo : https://www.youtube.com/watch?v=n_zNlsyrzPc
-
-A machine learning project to classify email/text messages as **SPAM** or **NOT SPAM** using multiple models (Naive Bayes, Logistic Regression, Linear SVM).  
-This project includes both a **Streamlit web app** and a **CLI tool** for interactive spam detection.
+A complete end-to-end **Spam Detection Pipeline** built using multiple Natural Language Processing (NLP) techniques and Machine Learning models. This project compares traditional approaches with modern embeddings and transformer-based methods.
 
 ---
 
 ## 🚀 Features
-- **Streamlit Web App**: User-friendly interface to classify messages.
-- **Command-Line Interface (CLI)**: Lightweight terminal-based spam detector.
-- **Multiple Models Tested**:
-  - Naive Bayes
-  - Logistic Regression
-  - Linear SVM
-- **Preprocessing**:
-  - Text normalization
-  - Stopword removal (NLTK)
-  - Stemming (Porter Stemmer)
-- **Visualization**:
-  - Model performance comparison using Seaborn & Matplotlib.
+* Text preprocessing with stemming & stopword removal
+* Multiple feature extraction techniques:
+  * TF-IDF
+  * Word2Vec
+  * Sentence Transformers
+* Multiple ML models:
+  * Naive Bayes
+  * Logistic Regression
+  * Support Vector Machine (SVM)
+  * XGBoost
+  * LightGBM
+* Model evaluation with:
+  * Accuracy
+  * ROC-AUC
+  * F1 Cross-validation
+* Zero-shot prediction using BERT
+* Live spam prediction CLI tool
 
 ---
 
-## 📊 Model Performance
-| Model               | Accuracy |
-|----------------------|----------|
-| Linear SVM           | 0.9821 |
-| Naive Bayes          | 0.9806   |
-| Logistic Regression  | 0.9806   |
-
-Linear SVM achieved the highest accuracy on the dataset.
-
-## 📂 Project Structure
-```
-├── svm_model.joblib          # Trained SVM model
-├── vectorizer.joblib         # Trained CountVectorizer
-├── spam.csv                  # Dataset (SMS Spam Collection)
-├── app.py                    # Streamlit web app
-├── predict.py                # CLI tool
-├── mail.ipynb                # Training & evaluation script
-├── requirements.txt          # Install Dependencies
-└── README.md                 # Project documentation
-```
-
-Dataset Link : https://www.kaggle.com/datasets/imgowthamg/email-spam-and-non-spam-datasets
+## 🧠 Models & Techniques Used
+### 🔹 Traditional ML
+* TF-IDF + Naive Bayes / Logistic Regression / SVM
+### 🔹 Embedding-Based
+* Word2Vec (Gensim)
+* Sentence Transformers (MiniLM)
+### 🔹 Advanced NLP
+* BERT (via HuggingFace Transformers pipeline)
 
 ---
 
-## ▶️ Usage
+## ⚙️ Installation
 
-### 1. Clone this repository
 ```bash
 git clone https://github.com/abdullahwaseem404/Secure-Mail-NLP.git
-```
-
-### 2. Install Dependencies
-```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run Streamlit App
-```bash
-streamlit run app.py
-```
+---
+
+## 📊 Evaluation Metrics
+* Accuracy
+* ROC-AUC Score
+* F1 Score (Cross-validation)
+* Classification Report
+
+---
