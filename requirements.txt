@@ -6,3 +6,10 @@ pandas
 scikit-learn
 matplotlib
 seaborn
+gensim
+xgboost
+lightgbm
+sentence-transformers
+transformers
+torch
+torchvision
